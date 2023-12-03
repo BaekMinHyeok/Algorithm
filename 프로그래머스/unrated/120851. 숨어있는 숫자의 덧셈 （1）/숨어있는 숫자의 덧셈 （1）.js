@@ -1,5 +1,3 @@
 function solution(my_string) {
-    let answer = 0;
-    my_string.split("").map(e => !isNaN(e)? answer += Number(e) : 0)
-    return answer;
+    return [...my_string].reduce((a,b) => Number(b) ? + a + + b : a,0)
 }
