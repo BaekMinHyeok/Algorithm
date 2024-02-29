@@ -1,18 +1,32 @@
-function solution(binomial) {
-    const num = binomial.split(' ');
-    
-    const a = parseInt(num[0]);
-    const op = num[1];
-    const b = parseInt(num[2]);
+const ops = {
+    '+' : (a, b) => a + b,
+    '-' : (a, b) => a - b,
+    '*' : (a, b) => a * b
+}
 
-    switch(op){
-        case '+':
-            return a + b;
-        case '-':
-            return a - b;
-        case '*':
-            return a * b;
-        default:
-            throw new Error('error')
-    }
+function solution(binomial) {
+    const [a, op, b] = binomial.split(' ');
+    
+    return ops[op](+a, +b)
+    
+    
+    
+    
+//     const arr = binomial.split(' ');
+    
+//     const a = parseInt(arr[0])
+//     const op = arr[1]
+//     const b = parseInt(arr[2])
+    
+//     switch(op){
+//         case "+":
+//                 return a + b;
+//         case "-":
+//                 return a - b;
+//         case "*":
+//                 return a * b;
+//         default:
+//             throw new Error("error")
+//     }
+    
 }
